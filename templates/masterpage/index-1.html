@@ -104,20 +104,7 @@
 
     <header class="main-header">
         <!-- Logo -->
-        <a href="/" class="logo" style="position: fixed; z-index: 1;">
-            <!-- mini logo -->
-            <b class="logo-mini" style="display: none;">
-                <span class="light-logo"><img src="{% static 'admin/folder/images/logo-mini-money-manager.png' %}"
-                                              style="height: 60px;width: 50px; mix-blend-mode: hue;" alt="logo"></span>
-                <span class="dark-logo"><img src="{% static 'admin/folder/images/logo-mini-money-manager.png' %}"
-                                              style="height: 60px;width: 50px; mix-blend-mode: hue;" alt="logo"></span>
-            </b>
-            <!-- logo-->
-            <span class="logo-lg" id='logo-money-manager'>
-    		    <img src="{% static 'admin/folder/images/logo-money-manager.png' %}" alt="logo"
-                    style="width: 200px;height: 60px; mix-blend-mode: hue;" class="light-logo">
-    	    </span>
-        </a>
+        
         <nav class="navbar navbar-static-top">
             <!-- Sidebar toggle button-->
             <div class="set-hehe-1">
@@ -239,81 +226,9 @@
                     </ul>
                 </li>
             </ul>
-            <ul class="sidebar-menu" data-widget="tree">
-                <li class="treeview {% if filter_master == 'master' %} {{ 'menu-open' }} {% endif %} ">
-                    <a href="#">
-                        <i class="fa fa-filter"></i>
-                        <span>Filter Master</span>
-                        <span class="pull-right-container">
-                          <i class="fa fa-angle-right pull-right"></i>
-                        </span>
-                    </a>
-                    <ul class="treeview-menu {% if filter_master == 'master' %} {{ 'res-tb-block mt-2' }} {% else %} {{ 'mt-2' }} {% endif %}">
-                        <li {% if filter_active == 'type_master' %} class="active mb-1"
-                                                                    style="background: rgb(6 0 255 / 22%); border-radius: 5px;" {% endif %}
-                                                                    style="background: rgb(6 0 255 / 11%);"><a
-                                href="/view/type"><i
-                                class="{% if filter_active == 'type_master' %} {{ 'fa fa-circle' }} {% else %} {{ 'fa fa-circle-thin' }} {% endif %}"></i>Types</a>
-                        </li>
-                        <li {% if filter_active == 'account_master' %} class="active mb-1"
-                                                                       style="background: rgb(6 0 255 / 22%); border-radius: 5px;" {% endif %}
-                                                                       style="background: rgb(6 0 255 / 11%);"><a
-                                href="/view/account"><i
-                                class="{% if filter_active == 'account_master' %} {{ 'fa fa-circle' }} {% else %} {{ 'fa fa-circle-thin' }} {% endif %}"></i>Account</a>
-                        </li>
-                        <li {% if filter_active == 'cat_master' %} class="active mb-1"
-                                                                   style="background: rgb(6 0 255 / 22%); border-radius: 5px;" {% endif %}
-                                                                   style="background: rgb(6 0 255 / 11%);"><a
-                                href="/view/category"><i
-                                class="{% if filter_active == 'cat_master' %} {{ 'fa fa-circle' }} {% else %} {{ 'fa fa-circle-thin' }} {% endif %}"></i>Category</a>
-                        </li>
-                        <li {% if filter_active == 'all_master' %} class="active mb-1"
-                                                                   style="background: rgb(6 0 255 / 22%); border-radius: 5px;" {% endif %}
-                                                                   style="background: rgb(6 0 255 / 11%);"><a
-                                href="/view/all"><i
-                                class="{% if filter_active == 'all_master' %} {{ 'fa fa-circle' }} {% else %} {{ 'fa fa-circle-thin' }} {% endif %}"></i>All
-                            Filter</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <ul class="sidebar-menu" data-widget="tree">
-                <li class="treeview {% if search_master == 'master' %} {{ 'menu-open' }} {% endif %} ">
-                    <a href="#">
-                        <i class="fa fa-search"></i>
-                        <span>Search Master</span>
-                        <span class="pull-right-container">
-                          <i class="fa fa-angle-right pull-right"></i>
-                        </span>
-                    </a>
-                    <ul class="treeview-menu {% if search_master == 'master' %} {{ 'res-tb-block mt-2' }} {% else %} {{ 'mt-2' }} {% endif %}">
-                        <li {% if search_active == 'search_master' %} class="active mb-1"
-                                                                      style="background: rgb(6 0 255 / 22%); border-radius: 5px;" {% endif %}
-                                                                      style="background: rgb(6 0 255 / 11%);"><a
-                                href="/search/"><i
-                                class="{% if search_active == 'search_master' %} {{ 'fa fa-circle' }} {% else %} {{ 'fa fa-circle-thin' }} {% endif %}"></i>Search
-                            Page</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <ul class="sidebar-menu" data-widget="tree">
-                <li class="treeview {% if chart_master == 'master' %} {{ 'menu-open' }} {% endif %} ">
-                    <a href="#">
-                        <i class="fa fa-pie-chart"></i>
-                        <span>Chart Master</span>
-                        <span class="pull-right-container">
-                          <i class="fa fa-angle-right pull-right"></i>
-                        </span>
-                    </a>
-                    <ul class="treeview-menu {% if chart_master == 'master' %} {{ 'res-tb-block mt-2' }} {% else %} {{ 'mt-2' }} {% endif %}">
-                        <li {% if chart_active == 'chart_master' %} class="active mb-1"
-                                                                    style="background: rgb(6 0 255 / 22%); border-radius: 5px;" {% endif %}
-                                                                    style="background: rgb(6 0 255 / 11%);"><a
-                                href="{% if test_date %} /chart/{{ test_date }}/ {% else %} /chart/ {% endif %}">
-                            <i class="{% if chart_active == 'chart_master' %} {{ 'fa fa-circle' }} {% else %} {{ 'fa fa-circle-thin' }} {% endif %}"></i>Chart
-                            Page</a></li>
-                    </ul>
-                </li>
-            </ul>
+            
+            
+            
              <ul class="sidebar-menu">
                     <li class="treeview">
                         <a href="/balance/">
@@ -573,21 +488,7 @@
         {% endif %}
     {% endif %}
 
-    <footer class="main-footer">
-        <ul class="nav">
-            <li class="nav-item">
-                <a href="https://prathmeshsoni.works/" target="_blank" class="nav-link">
-                    Prathmesh Soni <i class="fa fa-heart ml-1" style="color: red"></i>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="https://prathmeshsoni.works/project/" target="_blank" class="nav-link">
-                    Project
-                </a>
-            </li>
-        </ul>
-    </footer>
-    <div class="control-sidebar-bg"></div>
+    
 
     </div>
     <!-- Include Chart.js library -->
